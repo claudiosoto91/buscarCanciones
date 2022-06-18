@@ -1,0 +1,130 @@
+html{
+    min-height: 100%;
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    background-image: url('../img/bg-music.jpg');
+    font-family: 'Montserrat', sans-serif;
+    min-height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right bottom;
+}
+h1 {
+    font-weight: 900;
+    text-align: center;
+    color: white;
+}
+
+h2 {
+    text-align: center;
+}
+
+.contenido {
+    max-width: 1100px;
+    margin:  0 auto;
+    height: 100%;
+    padding: 20px;
+}
+
+
+@media (min-width:768px) {
+    .contenedor {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .contenedor > div {
+        flex: 1 0 50%;
+    }
+}
+
+
+
+.input {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.input label {
+    flex: 0 0 30px;
+    text-align: right;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.input span {
+    color: red;
+}
+.input input[type="text"] {
+    width: 70%;
+    height: 2.5rem;
+    padding: .5rem;
+    display: flex;
+    flex: 1;
+    border: none;
+    outline: none;
+}
+
+.input input[type="submit"]{
+    width: 40%;
+    margin-top: 20px;
+    background-color: #6f86d6;
+    padding: 1rem 2rem;
+    border-radius: .5em;
+    font-weight: 700;
+    color: white;
+    border:none;
+    transition: background-color .3s ease-in-out;
+} 
+.input input[type="submit"]:hover {
+    cursor: pointer;
+    background-color: #384e9d;
+    
+}
+
+
+.error {
+    width: 70%;
+    margin: 0 auto;
+    padding: 1rem;
+    border: 1px solid red;
+    background-color: rgb(249, 121, 121);
+    color: white;
+    text-align: center;
+}
+
+
+#resultado {
+    white-space: pre-wrap;
+    padding: 2rem;
+    height: 600px;
+    overflow: auto;
+}
+.resultado-letra{
+    background-color: rgba(240, 248, 255, 0.565);
+    text-align: center;
+}
+
+
+#loading {
+    display: flex;
+    margin: 0 auto;
+    width: 50px;
+    height: 50px;
+    border: 5px solid rgba(255,255,255,.3);
+    border-radius: 50%;
+    border-top-color: #fff;
+    animation: spin 1s ease-in-out infinite;
+    -webkit-animation: spin 1s ease-in-out infinite;
+  }
+  
+  @keyframes spin {
+    to { -webkit-transform: rotate(360deg); }
+  }
+  @-webkit-keyframes spin {
+    to { -webkit-transform: rotate(360deg); }
+  }
